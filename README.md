@@ -7,13 +7,6 @@ This is a Blog Development Tutorial Series on Youtube. This project is made by <
 - Admin Template [(Admin LTE 3)](https://adminlte.io/themes/dev/AdminLTE/index.html)
 
 
-#### Frontend Screenshot
-![Frontend Screenshot](public/img/frontend.png)
-
-#### Backend Screenshot
-![Backend Screenshot](public/img/backend.png)
-
-
 # install composer dependency
 composer install
 
@@ -24,11 +17,11 @@ cp .env.example .env
 php artisan key:generate
 
 # comment database query in AppServiceProvider.php like this
-// $categories = Category::take(5)->get();
-// View::share('categories', $categories);
+ $categories = Category::take(5)->get();
+ View::share('categories', $categories);
 
-// $setting = Setting::first();
-// View::share('setting', $setting);
+ $setting = Setting::first();
+ View::share('setting', $setting);
 
 # setup the database credentials and migrate database with seeders
 php artisan migrate --seed
